@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row-wrap">
+        <div class="col-1">
+        </div>
+        <div class="col">
+            <h2>Contacts</h2>
+        </div>
+    </div>
+    <div class="row-wrap">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 5%;">+</th>
+                        <th scope="col" style="width: 65%;">Basic Info</th>
+                        <th scope="col" style="width: 30%;">Company</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contact of userDetail?.contacts; index as i">
+                        <td>
+                            <input type="checkbox" (change)="checkBoxChange(contact, $event)">
+                        </td>
+                        <td>
+                            <h4>{{ contact.name }}</h4>
+                            <h5>{{ contact.email }}</h5>
+                        </td>
+                        <td>{{ contact.company }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-1">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+            <app-contact-detail [contactDetail]="contact" *ngIf="contact"></app-contact-detail>
+        </div>
+    </div>
+</div>

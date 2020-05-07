@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">{{contactDetail.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{contactDetail.role}} at {{contactDetail.company}}</h6>
+            </div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <td>
+                            <h6>Full Name</h6>
+                        </td>
+                        <td>
+                            <h6>{{ contactDetail.name }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6>Email</h6>
+                        </td>
+                        <td>
+                            <h6>{{ contactDetail.email }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6>Phone</h6>
+                        </td>
+                        <td>
+                            <h6>{{ contactDetail.phone }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6>Company</h6>
+                        </td>
+                        <td>
+                            <h6>{{ contactDetail.company }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6>Address</h6>
+                        </td>
+                        <td>
+                            <h6>{{ contactDetail.address }}</h6>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">Edit</a>
+                <a href="#" class="card-link">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
