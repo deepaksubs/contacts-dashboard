@@ -3,3 +3,8 @@
     flex-wrap: wrap;
     width: auto;
 }
+
+.btn-custom {
+  background: linear-gradient(to bottom left, #ff9966, #ff5e62);
+  color: white;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { ContactService } from '../shared/contact.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-body',
@@ -8,8 +10,18 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class ContactBodyComponent implements OnInit {
 
   @Input() userDetail = {};
-  contact: any;
-  constructor() { }
+  contact = {
+    name: '',
+    email: '',
+    age: '',
+    gender: '',
+    phone: '',
+    company: '',
+    role: '',
+    address: ''
+  };
+  constructor(public contactService: ContactService) {
+   }
 
   ngOnInit() {
   }
@@ -20,4 +32,7 @@ export class ContactBodyComponent implements OnInit {
     }
   }
 
+  saveContact(contact: any) {
+    console.log(contact);
+  }
 }

@@ -22,7 +22,7 @@ export class ContactService {
 
   }
 
-  deleteContact(id: number) {
-
+  deleteContact(id: number): Observable<void> {
+    return this.http.delete<void>('http://localhost:3000/userList/' + id);
   }
 }
