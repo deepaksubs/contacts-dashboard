@@ -32,7 +32,8 @@ export class ContactBodyComponent implements OnInit {
     }
   }
 
-  saveContact(contact: any) {
-    console.log(contact);
+  saveContact(form: NgForm) {
+    this.contactService.addContact(this.userDetail);
+    form.resetForm();
   }
 }

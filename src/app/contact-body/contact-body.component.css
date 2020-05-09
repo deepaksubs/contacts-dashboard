@@ -7,4 +7,14 @@
 .btn-custom {
   background: linear-gradient(to bottom left, #ff9966, #ff5e62);
   color: white;
+  box-shadow: 4px 2px 2px #ccc;
+}
+
+.btn-custom :hover {
+  background: linear-gradient(to bottom left, #ff9906, #ff5e02);
+}
+
+small {
+  font-size: smaller;
+  color: red;
 }

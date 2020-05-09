@@ -9,6 +9,7 @@ import { ContactService } from '../shared/contact.service';
 export class ContactDetailComponent implements OnInit {
 
   @Input() contactDetail = {};
+  @Input() toggleVisible = false;
   constructor(public contactService: ContactService) { }
 
   ngOnInit() {
